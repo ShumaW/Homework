@@ -10,9 +10,9 @@ public class Main {
         double valueTax = tax / 100;
 
         // Расчитываем цену товара вместе с НДС и округляем её до двух значений после запятой;
-        String str = String.format("%.2f", (price + (price * valueTax)));
+        String priceFinish = String.format("%.2f", (price + (price * valueTax)));
 
         // Выводим результиат на экран
-        System.out.println("Цена товара с НДС  равна " + str + " евро");
+        System.out.println("Цена товара с НДС  равна " + priceFinish + " евро");
     }
 }
