@@ -21,7 +21,7 @@ public class Main {
         int flask5 = 155;
         int flaks6 = 80;
 
-        boolean runCorrect2 = ((flask4>150 & flask5<100 & flaks6<100) | (flask4<100 & flask5>150 & flaks6<100) | (flask4<100 & flask5<100 & flaks6>150)) & (flask4 + flask5 + flaks6)<250;
+        boolean runCorrect2 = ((flask4>150 & flask5<100 & flaks6<100) | (flask4<100 & flask5>150 & flaks6<100) | (flask4<100 & flask5<100 & flaks6>150)) & (flask4 + flask5 + flaks6)<=250;
 
         System.out.println("The device is working correct - " + runCorrect2);
     }
