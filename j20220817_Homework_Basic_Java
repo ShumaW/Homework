@@ -8,7 +8,7 @@ public class Main {
         int flask2 = 2;
         int flaks3 = 85;
 
-        boolean runCorrect1 = (flask2>100 & flask1>100 & flaks3>100) | flask1>200 | flask2>200 | flaks3>200;
+        boolean runCorrect1 = (flask2>=100 & flask1>=100 & flaks3>=100) | flask1>200 | flask2>200 | flaks3>200;
 
         System.out.println("The device is working correct - " + runCorrect1);
 
