@@ -29,32 +29,44 @@ public class Main {
 
 
 
-        int speed = 105;
-        int speedLimit = 80;
-        int speedHigh = speed * 100 / speedLimit - 100;
+        int speed = 70;
+        int speedLimit = 50;
         boolean street = false;
+        int fine = 0;
+        int speedHigh = speed * 100 / speedLimit - 100;
+        String result1 = " ";
+
+
 
 
         if ((speedHigh < 10)) {
-            System.out.println("Вы нарушили скоростной режим незначительно.");
+            result1 = "Вы нарушили скоростной режим незначительно. Вам нужно уплатить штраф " ;
+            fine = 0;
         }
 
         if ((speedHigh >= 10 && speedHigh < 20) ) {
-                System.out.println("Вы превысили допустимую скорость на " + speedHigh + " % от допустимой скорости " + speedLimit + " км/ч . Вам нужно уплатить 50 евро штрафа");
+                result1 = "Вы превысили допустимую скорость. Вам нужно уплатить штраф ";
+                fine = 50;
 
         }
         if ((speedHigh >= 20 && speedHigh < 30) & street) {
-                System.out.println("Вы превысили допустимую скорость на " + speedHigh + " % от допустимой скорости " + speedLimit + " км/ч . Вам нужно уплатить 150 евро штрафа");
-            }
+                result1 = "Вы превысили допустимую скорость . Вам нужно уплатить  штраф ";
+                fine = 150;
+        }
         if ((speedHigh >= 20 && speedHigh < 30) & !street){
-                System.out.println("Вы превысили допустимую скорость на " + speedHigh + " % от допустимой скорости " + speedLimit + " км/ч . Вам нужно уплатить 200 евро штрафа");
+            result1 = "Вы превысили допустимую скорость . Вам нужно уплатить штраф ";
+            fine = 200;
         }
         if ((speedHigh >= 30) & street) {
-                System.out.println("Вы превысили допустимую скорость на " + speedHigh + " % от допустимой скорости " + speedLimit + " км/ч . Вам нужно уплатить 500 евро штрафа");
-                }
+            result1 = "Вы превысили допустимую скорость. Вам нужно уплатить штраф ";
+            fine=500;
+        }
         if ((speedHigh >= 30) & !street) {
-                System.out.println("Вы превысили допустимую скорость на " + speedHigh + " % от допустимой скорости " + speedLimit + " км/ч . Вам нужно уплатить 500 евро штрафа и вы лишаетесь прав на 3 месяца");
-                }
+            fine = 500;
+            result1 = "Вы превысили допустимую скорость. Вы лишаетесь прав на 3 месяца и вам нужно уплатить штраф " ;
+        }
+
+        System.out.println(result1 + fine + " евро.");
     }
  }
 
