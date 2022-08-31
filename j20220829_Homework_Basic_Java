@@ -30,18 +30,19 @@ public class Main {
         int num3 = 1;
         int num4 = 12;
 
-        if (num3<=num4){ while (num3<=num4) {
-            if (num3%2==0 && num3%3==0) {
+        if (num3<=num4){ 
+            while (num3<=num4) {
+                if (num3%2==0 && num3%3==0) {
                 System.out.println(num3 + " делится на 2 и на 3");
-            } else if (num3%2==0) {
+                } else if (num3%2==0) {
                 System.out.println(num3 + " делится на 2");
-            } else if (num3%3==0) {
+                } else if (num3%3==0) {
                 System.out.println(num3 + " делится на 3");
-            } else {
+                } else {
                 System.out.println(num3);
+                }
+                num3 = num3 + 1;
             }
-            num3 = num3 + 1;
-        }
         } else if (num3>=num4) {
             while (num3>=num4) {
                 if (num3%2==0 && num3%3==0) {
